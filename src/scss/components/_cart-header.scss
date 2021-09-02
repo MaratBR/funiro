@@ -1,0 +1,30 @@
+.cart-header {
+  &__icon {
+    display: block;
+    position: relative;
+    font-size: 24px;
+    color: #262f56;
+    transition: color 0.3s ease-in;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color-orange;
+      }
+    }
+
+    span {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: -10px;
+      right: -10px;
+      border-radius: 50%;
+      background-color: $color-orange;
+      font-size: 12px;
+      color: $color-white;
+    }
+  }
+}

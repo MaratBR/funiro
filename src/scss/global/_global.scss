@@ -15,9 +15,15 @@ body {
 }
 
 body {
-  font-size: 1rem;
-  font-family: "Roboto", sans-serif;
+  font-size: $font-size;
+  font-family: $font-family, sans-serif;
   font-weight: 400;
+  color: $color-main;
+  background-color: #fcf8f3;
+
+  & .--lock {
+    overflow: hidden;
+  }
 }
 
 ul,
@@ -31,4 +37,41 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: $maxWidthContainer + px;
+  margin: 0 auto;
+  padding: 15px 0;
 }

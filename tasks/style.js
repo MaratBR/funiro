@@ -1,10 +1,9 @@
-const plugins = [];
-
 const {
-  dest,
-  src
+  src,
+  dest
 } = require('gulp');
-const sass = require('gulp-dart-sass')
+// const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const bulk = require('gulp-sass-bulk-importer');
 const prefixer = require('gulp-autoprefixer');
 const clean = require('gulp-clean-css');
@@ -32,10 +31,10 @@ module.exports = function style() {
       ],
     }))
     .pipe(clean({
-      level: 2,
+      level: 2
     }))
     .pipe(concat('style.min.css'))
     .pipe(map.write('../sourcemaps/'))
-    .pipe(dest('build/css'))
+    .pipe(dest('build/css/'))
     .pipe(bs.stream())
 }
